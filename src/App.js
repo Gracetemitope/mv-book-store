@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BookCategory, NavBar } from './components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Books from './components/redux/books/books';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <React.Fragment>
+        <Router>
+         < NavBar/>
+        <Switch>
+        <Route path="/books" component={Books} />
+        <Route path="/categories" component={BookCategory} />
+        <Route path="/" component={Books} />
+        </Switch>
+       </Router>
+      </React.Fragment>
+
   );
 }
 
