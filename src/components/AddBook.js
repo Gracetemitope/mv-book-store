@@ -1,6 +1,20 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import {addBook, removeBook} from './redux/books/books';
 
+const dispatch = useDispatch();
+
+const submitBookToStore = () => {
+  const newBook = {
+      id, 
+      title,
+      author
+  }
+
+  dispatch(addBook(newBook));
+}
 const AddBook = () => {
+
   return (
     <div>
       <form>
@@ -16,7 +30,10 @@ const AddBook = () => {
       <option value="volvo">category</option>
       <option value="saab">Biography</option>
     </select>
-    <button className="btn outline-none btn-primary w-25">Add Book</button>
+    <button 
+    className="btn outline-none btn-primary w-25"
+    onClick={submitBookToStore}>Add Book
+    </button>
       </div>
       </form>
     </div>
