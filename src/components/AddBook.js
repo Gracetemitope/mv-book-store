@@ -1,20 +1,20 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import {addBook, removeBook} from './redux/books/books';
+import {addBook, removeBook} from '../redux/books/books';
 
-const dispatch = useDispatch();
 
-const submitBookToStore = () => {
-  const newBook = {
-      id, 
-      title,
-      author
-  }
-
-  dispatch(addBook(newBook));
-}
 const AddBook = () => {
+  const dispatch = useDispatch();
 
+  const submitBookToStore = () => {
+    const newBook = {
+        id, 
+        title,
+        author
+    }
+  
+    dispatch(addBook(newBook));
+  }
   return (
     <div>
       <form>
