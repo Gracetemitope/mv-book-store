@@ -1,9 +1,8 @@
 import React from 'react'
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { BookCategory, NavBar } from './components';
+import { BookCategory, BookList, NavBar } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Books from './components/redux/books/books';
 
 function App() {
   return (
@@ -11,9 +10,9 @@ function App() {
         <Router>
          < NavBar/>
         <Switch>
-        <Route path="/books" component={Books} />
+        <Route path="/books" component={BookList} />
         <Route path="/categories" component={BookCategory} />
-        <Route path="/" component={Books} />
+        <Route path="/" component={BookList} />
         </Switch>
        </Router>
       </React.Fragment>

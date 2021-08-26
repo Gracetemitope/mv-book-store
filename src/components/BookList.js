@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
-import AddBook from '../../AddBook';
+import AddBook from './AddBook';
 
-class Books extends Component {
+class BookList extends Component {
   state = {
     books: [
       {
@@ -15,7 +15,7 @@ class Books extends Component {
         categories: "Inspirational"
       },
       {
-        id: 3,
+         id: 3,
         title: "Becoming",
         categories: "Biography"
       }
@@ -40,4 +40,4 @@ class Books extends Component {
       }
 }
 
-export default Books
+export default BookList

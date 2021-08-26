@@ -16,6 +16,7 @@ const AddBook = () => {
       <option value="volvo">category</option>
       <option value="saab">Biography</option>
     </select>
+    <button className="btn outline-none btn-primary w-25">Add Book</button>
       </div>
       </form>
     </div>
