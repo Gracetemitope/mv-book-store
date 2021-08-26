@@ -1,15 +1,12 @@
-/* eslint comma-dangle: [2, "only-multiline"] */
-
-/* eslint-disable */ import React from 'react'; 
+import React from 'react'; 
 import ReactDOM from 'react-dom';
-import App from './App';   /* eslint-disable */
+import App from './App';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-
   document.getElementById('root')
 );
 

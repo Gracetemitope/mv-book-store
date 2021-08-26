@@ -5,9 +5,6 @@ import { BookCategory, NavBar } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Books from './components/redux/books/books';
 
-
-
-
 function App() {
   return (
       <React.Fragment>
