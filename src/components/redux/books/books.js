@@ -26,10 +26,10 @@ class Books extends Component {
     <div className="container">
       <div>
       {this.state.books.map(books => (
-        <div className="card mt-3">
+        <div className="card mt-3" key={books.id}>
         <div className="card-body">
         <p className="text-primary">{books.categories}</p>
-         <li>{books.title}</li> 
+         <li >{books.title}</li> 
         </div>
         </div>
       ))}
