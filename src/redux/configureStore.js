@@ -1,15 +1,16 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
-import booksReducer from './books/books';
+import createSagaMiddleware from 'redux-saga';
+import booksReducer, { bookSagas } from './books/books';
 
 const reducer = combineReducers({
     booksReducer
     // additional reducers could be added here
 });
-
-const store = createStore(
+const sagaMiddleWare = createSagaMiddleware();
+const middlewares = [sagaMiddleWare, logger]
+export const store = createStore(
     reducer,
-    applyMiddleware(logger)
+    applyMiddleware(...middlewares)
 );
-
-export default store;
+sagaMiddleWare.run(bookSagas);
