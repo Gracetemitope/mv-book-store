@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { BookCategory, BookList, NavBar } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
-import store from './redux/configureStore';
+import { store } from './redux/configureStore';
 
 function App() {
   return (
