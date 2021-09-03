@@ -39,10 +39,26 @@ export const getBooksSuccess = payload => ({
   payload
 });
 
+// async functions
+const addBookAsync = async (payload) => {
+  const response = await sendData(`${BASE_URL}/apps/${appID}/books`, payload)
+  return response
+}
+
+const removeBookAsync = async (payload) => {
+  const response = await deleteData(`${BASE_URL}/apps/${appID}/books/${payload.id}`)
+  return response
+}
+
+const getBookAsync = async () => {
+  const response = await getData(`${BASE_URL}/apps/${appID}/books`)
+  return response
+}
+
 // Redux Saga Generators
 function* addBook({ payload }) {
   try {
-    yield call(sendData, `${BASE_URL}/apps/${appID}/books`, payload);
+    yield call(addBookAsync, payload);
     yield put(addBookSuccess({ ...payload }));
   } catch (err) {
     console.log(err);
@@ -51,7 +67,7 @@ function* addBook({ payload }) {
 
 function* removeBook({ payload }) {
   try {
-    yield call(deleteData, `${BASE_URL}/apps/${appID}/books/${payload.id}`);
+    yield call(removeBookAsync, payload);
     yield put(removeBookSuccess({ id: payload.id }));
   } catch (err) {
     console.log(err);
@@ -60,7 +76,7 @@ function* removeBook({ payload }) {
 
 function* getBooks() {
   try {
-    const books = yield call(getData, `${BASE_URL}/apps/${appID}/books`);
+    const books = yield call(getBookAsync);
     yield put(getBooksSuccess(books));
   } catch (err) {
     console.log(err);
