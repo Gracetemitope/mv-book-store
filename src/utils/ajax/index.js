@@ -36,8 +36,7 @@ export const sendHttpRequest = async (method, url, data ) => {
   } else {
     return response.text()
   }
-  // console.log('response', response);
-  // return response.text();
+ 
 }
 const appID = 'n2gePywOhjdVEWf2vIlI'
 const BASE_URL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi`;
