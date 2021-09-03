@@ -22,8 +22,7 @@ const AddBook = () => {
       ...state,
     }
     dispatch(addBookRequest(newBook));
-    setState({ title: '', category: '' });
-    categoryRef.current.value = '';
+    setState({ title: '' });
     titleRef.current.value = '';
   }
 
