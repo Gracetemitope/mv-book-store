@@ -10,6 +10,7 @@ function App() {
   return (
     <Provider store={store}>
       <React.Fragment>
+        <div  className="wrapper">
         <Router>
          < NavBar/>
         <Switch>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" component={BookList} />
         </Switch>
        </Router>
+       </div>
       </React.Fragment>
       </Provider>
 
