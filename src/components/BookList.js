@@ -22,10 +22,30 @@ const BookList = ()=> {
         <div className="card mt-3" key={book.item_id}>
           <div className="card-body d-flex justify-content-between">
             <div>
-              <p className="text-primary">{book.category}</p>
-              <li >{book.title}</li> 
+              <p className="color-1">{book.category}</p>
+              <p className="book-title color-1" >{book.title}</p> 
+              <button className="book-links">Comments</button> |
+             <button onClick={() =>handleDelete(book.item_id)} className="book-links">Remove</button>  |
+             <button className="book-links">Edit</button>
+
+
             </div>
-            <button onClick={() =>handleDelete(book.item_id)}>Delete</button>
+            <div className="d-flex">
+            <div className="arc-wrapper">
+      <div className="arc arc-start" />
+      <div className="arc arc-end" />
+    </div>
+    <div>
+    <p className="book-status color-1">64%</p>
+    <p className="completed">Completed</p>
+    </div>
+    </div>
+    <div className="Line-2" />
+    <div>
+      <p>Current Chapter</p>
+      <p>Chapter 17</p>
+      <button className= "btn outline-none btn-primary">Update Progress</button>
+</div>
           </div>
         </div>
       ))}
