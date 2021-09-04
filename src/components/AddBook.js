@@ -52,9 +52,6 @@ const AddBook = () => {
             <option value="Power">Power</option>
             <option value="Leadership">Leadership</option>
             <option value="Tech">Tech</option>
-
-
-
           </select>
           <button 
             className="btn outline-none btn-primary w-25"
