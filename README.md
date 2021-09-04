@@ -9,7 +9,7 @@
 - Redux
 
 ## Screenshot of App
-<img width="763" alt="Leaderboard image" src="https://user-images.githubusercontent.com/58818795/132071888-8931376d-e71a-47f5-8d07-ea737dac5087.png">
+<img width="763" alt="Leaderboard image" src="https://user-images.githubusercontent.com/58818795/132072015-7d778b9a-4545-4e31-b7ac-1fbf2e71d6fc.png">
 
 
 ## Getting Started
