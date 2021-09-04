@@ -34,18 +34,19 @@ const AddBook = () => {
   }
   return (
     <div>
+      <div className="Line"></div>
       <form>
         <h4 className="mt-3 text-secondary">ADD NEW BOOK</h4>
-        <div className="d-flex">
+        <div className="d-flex justify-content-between">
           <input
             type="text"
-            className="form-control ml-3"
+            className="w-50 border"
             placeholder="Book Title"
             name="title"
             ref={titleRef}
             onChange={handleOnChange}
           />
-          <select name="category" ref={categoryRef} onChange={handleOnChange} className="form-control">
+          <select name="category" ref={categoryRef} onChange={handleOnChange} className="w-25 border">
           <option value="Category">Category</option>
             <option value="Inspirational">Inspirational</option>
             <option value="Career">Career</option>
@@ -54,7 +55,7 @@ const AddBook = () => {
             <option value="Tech">Tech</option>
           </select>
           <button 
-            className="btn outline-none btn-primary w-25"
+            className="btn outline-none btn-primary add-btn"
             onClick={submitBookToStore}>Add Book
           </button>
         </div>
